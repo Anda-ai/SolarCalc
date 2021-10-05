@@ -1,33 +1,31 @@
-html {
-  overflow-x: hidden;
-  position: absolute;
-  background: #04619f;
-}
 body {
-  position: absolute;
-  background: darkblue;
+  --color-primary: #ff9c1b;
+  --color-primary-dark: #3b073d;
+  --color-secondary: #071e3d;
+  --color-error: #cc3333;
+  --color-success: #4bb544;
+  --border-radius: 5px;
+  --background-one: #00163a;
+  --background-two: #7e002e;
+  /* position: absolute; */
+  background: var(--color-secondary);
   margin-left: 0%;
   margin-top: 0%;
-  overflow-y: hidden;
-  overflow-x: hidden;
   word-wrap: break-word;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
-img.backgndImg {
-  display: block;
-  position: absolute;
-  margin-top: 0%;
-  margin-left: 0%;
-  max-width: 100%;
-  max-height: 100%;
-  opacity: 0.2;
-  width: 100vw;
   height: 100vh;
+  /* width: auto; */
+  /* background-image: linear-gradient(
+    180deg,
+    var(--background-one),
+    var(--background-two)
+  ); */
 }
-div.logo {
+
+.logo {
   /*inside  Menu*/
   background-image: url("../images/SolarCheck Logo_white.png");
   background-repeat: no-repeat;
@@ -43,44 +41,77 @@ div.logo {
 
 .tile {
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  background-color: black;
-  max-width: 80%;
-  padding: 25px;
+  border-radius: 20px;
+  background-color: rgb(222, 222, 222);
+  max-width: 2000px;
+  /* padding: 25px; */
   /* margin: 10vh 10vh 0 10vh; */
-  /* position: center;
-  display: flex;
+  position: center;
   align-items: center;
-  justify-content: center; */
-  /* display: flex;
+  justify-content: center;
+  display: flex;
   flex-direction: column;
-  align-items: flex-start; */
+  align-items: flex-start;
 }
 
-div.instruction-text {
+.instruction-text {
   position: relative;
   display: block;
   font-size: 19px;
-  color: white;
+  color: black;
   text-align: center;
+  padding: 8vw 3vw 3vw 3vw;
+  width: 80vw;
+  /* max-width: 905px; */
+}
+
+p {
+  margin: 0;
+}
+
+@media (max-width: 450px) {
+  .instruction-text {
+    font-size: 16px;
+  }
+  .calc-Container {
+    font-size: 13px;
+  }
+}
+
+form {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 1vw 3vw 4vw 3vw;
   width: 80vw;
 }
-div.calc-Container {
+
+.calc-Container {
+  /* height: 4vh; */
   position: relative;
   display: block;
-  margin-top: 20vh;
-  background-color: white;
-  border-radius: 5px 5px 5px 5px;
+  margin: 2vh 8vh 2vh 8vh;
+  background-color: rgb(138, 138, 138);
+  border: 0;
+  border-radius: 10px;
+  padding: 1vh;
+  text-align: center;
+  width: 20vh;
+  justify-content: center;
 }
-div.calc-Container:hover {
-  background-color: lightgray;
-  -o-transition: 2s;
-  -ms-transtion: 2s;
-  -maz-transtion: 2s;
-  -webkit-transition: 2s;
-  transition: 2s;
+
+.calc-Container:hover {
+  background-color: rgb(111, 110, 110);
+  color: white;
+  -o-transition: 0.5s;
+  -ms-transtion: 0.5s;
+  -maz-transtion: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  justify-content: center;
 }
-button.calc {
+
+.calc {
   position: relative;
   display: block;
   font-size: 15px;
@@ -88,8 +119,16 @@ button.calc {
   text-align: center;
   background-color: transparent;
   border: transparent;
-  color: black;
+  color: white;
+  justify-content: center;
+  padding: 0.5vh 0;
+  text-align: center;
 }
+
+.calc:hover {
+  text-color: white;
+}
+
 button:active,
 button:focus {
   -moz-outline-style: none; /*removes ouline from button*/
