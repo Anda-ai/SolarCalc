@@ -14,7 +14,7 @@ $("body").css("height",h+"px");
 //Check if device is mobile , iPad or Desktop and set sizes accordingly
 function checkDevice(){
     if(w<=(0.3*screenWidth)){
-        $("div.instruction-text").css("margin-top","10vh");
+        // $("div.instruction-text").css("margin-top","10vh");
         $("button.calc").css("margin-top","35vh");
         $("div.calc-Container").css("width","80vw");
         $("div.calc-Container").css("height","40px");
@@ -22,7 +22,7 @@ function checkDevice(){
         $("button.calc").css("height","40px");
     }
     else if(w>=(0.3*screenWidth) && w<(0.7*screenWidth)){
-        $("div.instruction-text").css("margin-top","15vh");
+        // $("div.instruction-text").css("margin-top","15vh");
         $("button.calc").css("margin-top","30vh");
         $("div.calc-Container").css("width","30vw");
         $("div.calc-Container").css("height","50px");
@@ -30,7 +30,7 @@ function checkDevice(){
         $("button.calc").css("height","50px");
     }
     else if(w>=(0.7*screenWidth)){
-        $("div.instruction-text").css("margin-top","25vh");
+        // $("div.instruction-text").css("margin-top","25vh");
         $("button.calc").css("margin-top","10vh");
         $("div.calc-Container").css("width","20vw");
         $("div.calc-Container").css("height","60px");
@@ -48,9 +48,9 @@ function checkDevice(){
         //NO CODE YET
     }
     else{
-        $("div.logo").css("margin-left",(( 0.5 * w ) - ( 0.5 * titImgWidth))+"px");
-        $("div.instruction-text").css("margin-left",(( 0.5 * w ) - ( 0.5 * instructionTextWidth))+"px");
-        $("div.calc-Container").css("margin-left",(( 0.5 * w ) - ( 0.5 * calcWidth))+"px");
+        // $("div.logo").css("margin-left",(( 0.5 * w ) - ( 0.5 * titImgWidth))+"px");
+        // $("div.instruction-text").css("margin-left",(( 0.5 * w ) - ( 0.5 * instructionTextWidth))+"px");
+        // $("div.calc-Container").css("margin-left",(( 0.5 * w ) - ( 0.5 * calcWidth))+"px");
     }
 }
 function setSizes(){
