@@ -5,9 +5,9 @@ body {
   --color-error: #cc3333;
   --color-success: #4bb544;
   --border-radius: 5px;
-  --background-one: #d0beed;
+  --background-one: white;
   --background-two: #7e002e;
-  --background-three: #c2dee8;
+  --background-three: white;
   --background-four: #849a90;
   /* position: absolute; */
   background: linear-gradient(
@@ -47,6 +47,13 @@ body {
   top: 2.5vh;
 }
 
+h1 {
+  position: absolute;
+  margin: 22.5vh 0 77.5vh 0;
+  color: #ff9c1b;
+  text-shadow: 0 0 10px #ffa733;
+}
+
 .tile {
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
   border-radius: 20px;
@@ -73,6 +80,11 @@ body {
   padding: 5vw 4vw 1vw 4vw;
   width: 60vw;
   /* max-width: 905px; */
+}
+
+span {
+  font-weight: 600;
+  /* color: black; */
 }
 
 @media (max-width: 450px) {
@@ -104,7 +116,7 @@ form {
   display: block;
   margin: 2vh 8vh 2vh 8vh;
   background-color: var(--background-three);
-  color: white;
+  color: var(--color-primary);
   border: 0;
   border-radius: 10px;
   padding: 1vh;
@@ -114,7 +126,7 @@ form {
 }
 
 .calc-Container:hover {
-  background-color: #53647e;
+  background-color: white;
   color: #ff9c1b;
   -o-transition: 0.5s;
   -ms-transtion: 0.5s;
