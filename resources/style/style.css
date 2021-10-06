@@ -5,10 +5,17 @@ body {
   --color-error: #cc3333;
   --color-success: #4bb544;
   --border-radius: 5px;
-  --background-one: #00163a;
+  --background-one: #d0beed;
   --background-two: #7e002e;
+  --background-three: #c2dee8;
+  --background-four: #849a90;
   /* position: absolute; */
-  background: var(--color-secondary);
+  background: linear-gradient(
+      110deg,
+      var(--background-three),
+      var(--background-one)
+    )
+    var(--background-three);
   margin-left: 0%;
   margin-top: 0%;
   word-wrap: break-word;
@@ -23,11 +30,12 @@ body {
     var(--background-one),
     var(--background-two)
   ); */
+  font-family: "Exo", Avenir, sans-serif;
 }
 
 .logo {
   /*inside  Menu*/
-  background-image: url("../images/SolarCheck Logo_white.png");
+  background-image: url("../images/Logo_clean.png");
   background-repeat: no-repeat;
   background-size: 270px;
   align-items: top;
@@ -40,9 +48,9 @@ body {
 }
 
 .tile {
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
   border-radius: 20px;
-  background-color: rgb(222, 222, 222);
+  background-color: var(--color-secondary);
   max-width: 2000px;
   /* padding: 25px; */
   /* margin: 10vh 10vh 0 10vh; */
@@ -57,33 +65,37 @@ body {
 .instruction-text {
   position: relative;
   display: block;
-  font-size: 19px;
-  color: black;
+  /* font-size: 19px; */
+  font-size: clamp(0.5em, 0.25em + 2vw, 2em);
+  font-weight: 300;
+  color: white;
   text-align: center;
-  padding: 8vw 3vw 3vw 3vw;
-  width: 80vw;
+  padding: 5vw 4vw 1vw 4vw;
+  width: 60vw;
   /* max-width: 905px; */
-}
-
-p {
-  margin: 0;
 }
 
 @media (max-width: 450px) {
   .instruction-text {
     font-size: 16px;
+    width: 90vw;
   }
   .calc-Container {
     font-size: 13px;
+    width: 35vh;
+  }
+  form {
+    /* width: 90vw; */
+    padding: 0 15vw;
+    margin: 0 15vw;
   }
 }
 
 form {
-  position: relative;
   display: flex;
   justify-content: center;
   padding: 1vw 3vw 4vw 3vw;
-  width: 80vw;
+  width: 60vw;
 }
 
 .calc-Container {
@@ -91,7 +103,8 @@ form {
   position: relative;
   display: block;
   margin: 2vh 8vh 2vh 8vh;
-  background-color: rgb(138, 138, 138);
+  background-color: var(--background-three);
+  color: white;
   border: 0;
   border-radius: 10px;
   padding: 1vh;
@@ -101,14 +114,15 @@ form {
 }
 
 .calc-Container:hover {
-  background-color: rgb(111, 110, 110);
-  color: white;
+  background-color: #53647e;
+  color: #ff9c1b;
   -o-transition: 0.5s;
   -ms-transtion: 0.5s;
   -maz-transtion: 0.5s;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   justify-content: center;
+  text-shadow: 0 0 8px #ffa733;
 }
 
 .calc {
