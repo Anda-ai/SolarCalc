@@ -10,12 +10,19 @@ body {
   --background-three: white;
   --background-four: #849a90;
   /* position: absolute; */
-  background: linear-gradient(
+  /* background: linear-gradient(
       110deg,
       var(--background-three),
       var(--background-one)
     )
-    var(--background-three);
+    var(--background-three); */
+  /* background-image: url("../images/HTZJq4d.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center top;
+  background-size: 120%;
+  background-position: -10vw 30vw; */
+  /* filter: grayscale(100%); */
   margin-left: 0%;
   margin-top: 0%;
   word-wrap: break-word;
@@ -31,6 +38,31 @@ body {
     var(--background-two)
   ); */
   font-family: "Exo", Avenir, sans-serif;
+}
+
+.sun {
+  width: 100%;
+  /* size: 50%; */
+  position: absolute;
+  z-index: -1;
+  filter: invert(100%);
+  filter: grayscale(70%);
+  transition: 0.3s;
+  margin-left: -20%;
+  margin-top: 20%;
+  opacity: 0.5;
+  /* padding: 0vw 0vw 1vw 0vw; */
+}
+
+.tile:hover .sun {
+  width: 102%;
+  filter: invert(0%);
+  filter: grayscale(100%);
+  transition: 0.3s;
+  margin-left: -21%;
+  opacity: 0.8;
+  /* shadow: 10px 10px 8px 10px var(--color-primary); */
+  -webkit-filter: drop-shadow(1px 1px 30px rgb(249, 87, 0));
 }
 
 .logo {
@@ -100,6 +132,13 @@ span {
     /* width: 90vw; */
     padding: 0 15vw;
     margin: 0 15vw;
+  }
+  .sun {
+    margin-left: -5%;
+    margin-top: 0;
+  }
+  .tile:hover .sun {
+    margin-left: -6%;
   }
 }
 
