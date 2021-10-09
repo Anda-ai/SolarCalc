@@ -22,24 +22,23 @@ and open the template in the editor.
             <div class="instruction">Select one option below:</div>
             <div class="options">
                 <label class="container">
-                    <label class="text" for="opt1">Private accurate electricity usage for 3 months for a broad quote</label>
                     <input type="checkbox" class="solar-item" id="opt1">
                     <span class="checkmark"></span>
+                    <label class="text" for="opt1">Provate accurate electricity usage for 3 months for a <span>broad quote</span></label>
                 </label>
 
                 <label class="container">
-                    <label class="text" for="opt2">Add electrical items from your home for an accurate quote?</label>
                     <input type="checkbox" class="battery-item" id="opt2">
                     <span class="checkmark"></span>
+                    <label class="text" for="opt2">Add electrical items from your home for an <span>accurate quote</span></label>
                 </label>
             </div>
-            <form method="POST" onsubmit="verifyAction(event)" id="info">
+            <form method="POST" action = "electricity-usage.html" onsubmit="verifyAction(event)" id="info">
                     <button type="submit" class="calc-Container">NEXT</button>
             </form>
         </section>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script src="resources/script/solutiontype.js" type="text/javascript"></script> 
         <script src="resources/script/script.js" type="text/javascript"></script>
     </body>
 </html>

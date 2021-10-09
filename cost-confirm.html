@@ -14,29 +14,27 @@ and open the template in the editor.
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
         <link rel="icon" href="resources/icons/icon.png" type="image/png">
         <link href="resources/style/style.css" rel="stylesheet" type="text/css"/>
+       
     </head>
     <body>
         <div class="logo"/></div>
         <section class="tile">
-            <div class="instruction-text">What do you want to achieve?</div>
-            <div class="instruction">Select one option below:</div>
-            <div class="options">
-                <label class="container">
-                    <input type="checkbox" class="solar-item" id="opt1">
-                    <span class="checkmark"></span>
-                    <label class="text" for="opt1">Saving money (solar panels only)</label>
-                </label>
-
-                <label class="container">
-                    <input type="checkbox" class="battery-item" id="opt2">
-                    <span class="checkmark"></span>
-                    <label class="text" for="opt2">Best of both worlds (solar panels with battery backup)</label>
-                </label>
+            <div class="instruction-text">Want to see what this is going to cost you?</div>
+            <div class="instruction">Thanks for filling in all your details! To see your personalised quote, please enter your email address in the field below:</div>
+            <div>
+                <div class="options">
+                    <!--New code here...-->
+                    <input id="emailcomplete" placeholder="Email Address" type="text" class="email"/>
+                </div>
             </div>
-            <form method="POST" onsubmit="verifyAction(event)" id="info">
-                    <button type="submit" class="calc-Container">NEXT</button>
+            <form method="POST" onsubmit="verifyEmail(event)">
+                    <button type="submit" class="rec-Container">RECEIVE DETAILED QUOTE</button>
+            </form>
+            <form method="POST">
+                    <button type="submit" class="custom-Container">CUSTOMIZE ELECTRICITY USAGE</button>
             </form>
         </section>
+        <script src="https://maps.googleapis.com/maps/api/js?libraries=places&callback=initialize&key=AIzaSyCF_57IXuWDUqgwBnr0y5UjCF-cZRn9Ask" defer></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="resources/script/script.js" type="text/javascript"></script>

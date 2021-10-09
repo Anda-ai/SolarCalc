@@ -23,27 +23,32 @@ and open the template in the editor.
             <div class="instruction">Please provide us with usage figures (the kWh figure on your bill) for the last three months:</div>
             <div class="options">
                 <!--New code here...-->
-                <div id="locationField" class="optB" >
-                    <input id="autocomplete" placeholder="July" onFocus="geolocate()" type="text"/>
-                    <div class="search">kWh</div>
+                <div class="underline">
+                    <div id="locationField" class="optB" >
+                        <input id="autocomplete" placeholder="July" type="text" class = "a"/>
+                        <div class="search">kWh</div>
+                    </div>
                 </div>
-                <div id="locationField" class="optB" >
-                    <input id="autocomplete" placeholder="August" onFocus="geolocate()" type="text"/>
-                    <div class="search">kWh</div>
+                <div class="underline">
+                    <div id="locationField" class="optB" >
+                        <input id="autocomplete" placeholder="August" type="text" class = "b"/>
+                        <div class="search">kWh</div>
+                    </div>
                 </div>
-                <div id="locationField" class="optB" >
-                    <input id="autocomplete" placeholder="September" onFocus="geolocate()" type="text"/>
-                    <div class="search">kWh</div>
+                <div class="underline">    
+                    <div id="locationField" class="optB" >
+                        <input id="autocomplete" placeholder="September" type="text" class = "c"/>
+                        <div class="search">kWh</div>
+                    </div>
                 </div>
             </div>
             <form method="POST" onsubmit="verifyAction(event)" id="info">
-                    <button type="submit" class="calc-Container">NEXT</button>
+                    <button type="submit" class="calc-Container">CALCULATE</button>
             </form>
         </section>
         <script src="https://maps.googleapis.com/maps/api/js?libraries=places&callback=initialize&key=AIzaSyCF_57IXuWDUqgwBnr0y5UjCF-cZRn9Ask" defer></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script src="resources/script/map.js" type="text/javascript"></script>
         <script src="resources/script/script.js" type="text/javascript"></script>
     </body>
 </html>
