@@ -19,23 +19,21 @@ and open the template in the editor.
     <body>
         <div class="logo"/></div>
         <section class="tile">
-            <div class="instruction-text">Basic information</div>
-            <div class="instruction">Please give us some basic information:</div>
+            <div class="instruction-text">Electricity Usage</div>
+            <div class="instruction">Please provide us with usage figures (the kWh figure on your bill) for the last three months:</div>
             <div class="options">
-                <div class="instruction">Is your home single phase or three phase?</div>
-                <!--New code here...-->
-                <div class="optA">
-                    <select name="plan" onchange='checkOpt()' class="optA">
-                        <option value="none" selected disabled hidden >Select phase</option>
-                        <option value="single">Single phase</option>
-                        <option value="three">Three phase</option>
-                    </select>
-                </div>
-                <div class="instruction">What suburb do you live in?</div>
                 <!--New code here...-->
                 <div id="locationField" class="optB" >
-                    <input id="autocomplete" placeholder="Suburb" onFocus="geolocate()" type="text"/>
-                    <div class="search"><i class="fa fa-search"></i></div>
+                    <input id="autocomplete" placeholder="July" onFocus="geolocate()" type="text"/>
+                    <div class="search">kWh</div>
+                </div>
+                <div id="locationField" class="optB" >
+                    <input id="autocomplete" placeholder="August" onFocus="geolocate()" type="text"/>
+                    <div class="search">kWh</div>
+                </div>
+                <div id="locationField" class="optB" >
+                    <input id="autocomplete" placeholder="September" onFocus="geolocate()" type="text"/>
+                    <div class="search">kWh</div>
                 </div>
             </div>
             <form method="POST" onsubmit="verifyAction(event)" id="info">
