@@ -23,7 +23,8 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
+  width: 100%;
   /* width: auto; */
   /* background-image: linear-gradient(
     180deg,
@@ -38,33 +39,35 @@ body {
   background-image: url("../images/Logo_clean.png");
   background-repeat: no-repeat;
   background-size: 270px;
-  align-items: top;
-  display: block;
+  align-items: center;
   margin: 0vh 5vh 5vh 5vh;
   width: 270px; /*fill all of the menu*/
-  height: 50px;
-  position: absolute;
+  min-height: 50px; /*prevent images from shrinking on height resizes*/
+  position: relative;
+  display: block;
   top: 2.5vh;
 }
 
 h1 {
-  position: absolute;
-  margin: 22.5vh 0 77.5vh 0;
+  position: relative;
+  display: block;
+  margin: 7.5vh 0 3.5vh 0;
   color: #ff9c1b;
   text-shadow: 0 0 10px #ffa733;
 }
 
 .tile {
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
-  border-radius: 20px;
-  background-color: var(--color-secondary);
-  max-width: 2000px;
-  /* padding: 25px; */
-  /* margin: 10vh 10vh 0 10vh; */
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
+    position: relative;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    background-color: var(--color-secondary);
+    max-width: 2000px;
+    padding: 25px;
+    margin: 10vh 10vh 0 10vh; 
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .instruction-text {
@@ -116,9 +119,10 @@ span {
 }
 
 form {
+  position: relative;
   display: flex;
+  justify-item: center;
   justify-content: center;
-  padding: 1vw 3vw 4vw 3vw;
   width: 60vw;
 }
 
@@ -332,4 +336,129 @@ span.checkmark {
 /* When the radio button is checked, add a blue background */
 .container input:checked ~ .checkmark {
   background-color: #081e3d;
+}
+#emailcomplete{
+    position: relative;
+    width: 100%;
+    height: 80%;
+    align-items:flex-start;
+    justify-content:flex-start;
+    flex-direction: row;
+    text-align: start;
+    color: #70747f;
+    font-size: 17px;
+    font-weight: 300;
+    background-color: transparent;
+    border: 0;
+    top:1%;/* + 1% because search and autocomplete are offset by 1%*/
+    padding-left: 1vw;
+}
+#emailcomplete:focus {
+    outline:none;
+}
+.custom-Container, .rec-Container{
+  /* height: 4vh; */
+  position: relative;
+  display: block;
+  text-align: center;
+  margin: 2vh 8vh 2vh 8vh;
+  background-color: var(--background-three);
+  color: var(--color-primary);
+  border: 0;
+  border-radius: 10px;
+  padding: 1vh;
+  width: 40vh;
+}
+.custom-Container:hover, .rec-Container:hover {
+  background-color: white;
+  color: #ff9c1b;
+  -o-transition: 0.5s;
+  -ms-transtion: 0.5s;
+  -maz-transtion: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  justify-content: center;
+  text-shadow: 0 0 8px #ffa733;
+}
+.custom-items{
+    width: 60%;
+    background-color: white;
+    text-align: center;
+    margin-top: 5vh;
+}
+.custom-item{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    flex-direction: row;
+    text-align: center;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+.minus{
+    position: relative;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    height: 100%;
+    background-color: var(--color-secondary);
+    border-radius: 50%;
+    color: white;
+    font-weight:900;
+    cursor: pointer;
+}
+input.number{
+    position: relative;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    height: 100%;
+    color: var(--color-secondary);
+    background-color: var(--color-secondary);
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    color: white;
+    font-size: 17px;
+    border: 0;
+}
+input.number:focus {
+    outline:none;
+}
+.plus{
+    position: relative;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    height: 100%;
+    background-color: var(--color-secondary);
+    border-radius: 50%;
+    color: white;
+    font-weight:900;
+    cursor: pointer;
+}
+.counter{
+    width: 300px;
+    position: relative;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2vw;
+}
+.icon{
+    margin-left: 15px;
+}
+#item-name{
+    width: 400px;
+    text-align:start;
+    margin-left: 35px;
 }

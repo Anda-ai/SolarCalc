@@ -14,25 +14,24 @@ and open the template in the editor.
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
         <link rel="icon" href="resources/icons/icon.png" type="image/png">
         <link href="resources/style/style.css" rel="stylesheet" type="text/css"/>
-       
     </head>
     <body>
         <div class="logo"/></div>
         <section class="tile">
             <div class="instruction-text">Want to see what this is going to cost you?</div>
             <div class="instruction">Thanks for filling in all your details! To see your personalised quote, please enter your email address in the field below:</div>
-            <div>
-                <div class="options">
+            <div class="underline">
                     <!--New code here...-->
                     <input id="emailcomplete" placeholder="Email Address" type="text" class="email"/>
-                </div>
             </div>
+            </br></br>
             <form method="POST" onsubmit="verifyEmail(event)">
                     <button type="submit" class="rec-Container">RECEIVE DETAILED QUOTE</button>
             </form>
-            <form method="POST">
+            <form action="customise.html" method="POST">
                     <button type="submit" class="custom-Container">CUSTOMIZE ELECTRICITY USAGE</button>
             </form>
+            </br></br></br></br>
         </section>
         <script src="https://maps.googleapis.com/maps/api/js?libraries=places&callback=initialize&key=AIzaSyCF_57IXuWDUqgwBnr0y5UjCF-cZRn9Ask" defer></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

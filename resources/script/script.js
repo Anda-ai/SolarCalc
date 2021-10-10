@@ -9,6 +9,7 @@ var unit_c;
 var length_a;
 var length_b;
 var length_c;
+var number = 0;
 //Solution type or Quate kind.................................................................
 optA = document.querySelector('#opt1');
 document.body.addEventListener('click', function (event) {
@@ -84,14 +85,12 @@ document.body.addEventListener('click', function (event) {
 });
 //Info page..........................................................................
 
-
 var opt1 = document.querySelector('select.optA');
 document.body.addEventListener('click', function (event) {
     if (optA.contains(event.target)) {
             checkOpt();
     }
 });
-
 var opt2 = document.querySelector('#autocomplete');
 document.body.addEventListener('click', function (event) {
     if (opt2.contains(event.target)) {
@@ -128,6 +127,11 @@ function checkFill(){
 var p = window.location.pathname;
  if (p.length === 0 || p === "/" || p.match(/^\/?index/))
      $("button.calc-Container").css("opacity","1.0");
+ //customise page.........................................................................
+if(document.location.pathname === "/customise.html"){
+     $("button.calc-Container").css("opacity","1.0");
+     document.getElementById("info").action = "/cost-confirm.html";
+}
 //Verify all the information required is filled..............
 function verifyAction(event){
     opaq = document.querySelector("button.calc-Container").style.opacity;
@@ -198,6 +202,28 @@ function verifyAction(event){
         }
     }
     else{
-        
+    }
+}
+function verifyEmail(){
+    alert("Email needs to be verified");
+}
+function decrement(id){
+    number = $('input#'+id+'.number').val();
+    if(number > 0 && number < 100){
+        number--;
+        $('input#'+id+'.number').val(number);
+    }
+    else{
+        $('input#'+id+'.number').val("99");
+    }
+}
+function increment(id){
+    number = $('input#'+id+'.number').val();
+    if(number >= 0 && number < 98){
+        number++;
+        $('input#'+id+'.number').val(number);
+    }
+    else{
+        $('input#'+id+'.number').val("99");
     }
 }

@@ -6,11 +6,431 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>SolarCheck Comparison</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="resources/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="resources/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <link rel="icon" href="resources/icons/icon.png" type="image/png">
+        <link href="resources/style/style.css" rel="stylesheet" type="text/css"/>
+       
     </head>
     <body>
-        <div>TODO write content</div>
+        <div class="logo"/></div>
+        <section class="tile">
+            <div class="instruction-text">Add Your Utilities</div>
+            <div class="custom-items">
+                <!--Item 1............-->
+                <div class="custom-item">
+                    <img alt src="resources/icons/Icons_loads/grill.svg" class="icon">
+                    <div class="text" id="item-name">Barbecue Grill Electric</div>
+                    <div class="counter">
+                        <div id="1" class="minus" onclick="decrement(this.id)">-</div>
+                        <input id="1" type="number" class="number" value="0" min="0" max="99" step="1">
+                        <div id="1" class="plus" onclick="increment(this.id)">+</div>
+                    </div>
+                </div>
+                <!--Item 2............-->
+                <div class="custom-item">
+                    <img alt src="resources/icons/Icons_loads/coffee.svg" class="icon">
+                    <div class="text" id="item-name">Coffee Machine</div>
+                    <div class="counter">
+                        <div id="2" class="minus" onclick="decrement(this.id)">-</div>
+                        <input id="2" type="number" class="number" value="0" min="0" max="99" step="1"> 
+                        <div id="2" class="plus" onclick="increment(this.id)">+</div>
+                    </div>
+                </div>
+                <!--Item 3............-->
+                <div class="custom-item">
+                    <img alt src="resources/icons/Icons_loads/hood.svg" class="icon">
+                    <div class="text" id="item-name">Cooker Hood</div>
+                    <div class="counter">
+                        <div id="3" class="minus" onclick="decrement(this.id)">-</div>
+                        <input id="3" type="number" class="number" value="0" min="0" max="99" step="1"> 
+                        <div id="3" class="plus" onclick="increment(this.id)">+</div>
+                    </div>
+                </div>
+                <!--Item 4............-->
+                <div class="custom-item">
+                    <img alt src="resources/icons/Icons_loads/cutting.svg" class="icon">
+                    <div class="text" id="item-name">Cutting Machine</div>
+                    <div class="counter">
+                        <div id="4" class="minus" onclick="decrement(this.id)">-</div>
+                        <input id="4" type="number" class="number" value="0" min="0" max="99" step="1"> 
+                        <div id="4"  class="plus" onclick="increment(this.id)">+</div>
+                    </div>
+                </div> 
+                <!--Item 5............-->
+                <div class="custom-item">
+                    <img alt src="resources/icons/Icons_loads/lamps.svg" class="icon">
+                    <div class="text" id="item-name">Energy Saver Lamps</div>
+                    <div class="counter">
+                        <div id="5" class="minus" onclick="decrement(this.id)">-</div>
+                        <input id="5" type="number" class="number" value="0" min="0" max="99" step="1"> 
+                        <div id="5" class="plus" onclick="increment(this.id)">+</div>
+                    </div>
+                </div> 
+                <!--Item 6............-->
+                <div class="custom-item">
+                    <img alt src="resources/icons/Icons_loads/mixer.svg" class="icon">
+                    <div class="text" id="item-name">Food Mixer</div>
+                    <div class="counter">
+                        <div id="6" class="minus" onclick="decrement(this.id)">-</div>
+                        <input id="6" type="number" class="number" value="0" min="0" max="99" step="1"> 
+                        <div id="6" class="plus" onclick="increment(this.id)">+</div>
+                    </div>
+                </div> 
+                <!--Item 7............-->
+                <div class="custom-item">
+                    <img alt src="resources/icons/Icons_loads/fridge.svg" class="icon">
+                    <div class="text" id="item-name">Fridge / Freezer</div>
+                    <div class="counter">
+                        <div id="7" class="minus" onclick="decrement(this.id)">-</div>
+                        <input id="7" type="number" class="number" value="0" min="0" max="99" step="1"> 
+                        <div id="7" class="plus" onclick="increment(this.id)">+</div>
+                    </div>
+                </div> 
+                <!--Item 8............-->
+                <div class="custom-item">
+                    <img alt src="resources/icons/Icons_loads/pan.svg" class="icon">
+                    <div class="text" id="item-name">Frying Pan</div>
+                    <div class="counter">
+                        <div id="8" class="minus" onclick="decrement(this.id)">-</div>
+                        <input id="8" type="number" class="number" value="0" min="0" max="99" step="1"> 
+                        <div id="8" class="plus" onclick="increment(this.id)">+</div>
+                    </div>
+                </div> 
+                <!--Item 9............-->
+                <div class="custom-item">
+                    <img alt src="resources/icons/Icons_loads/icemaker.svg" class="icon">
+                    <div class="text" id="item-name">Ice Maker</div>
+                    <div class="counter">
+                        <div id="9" class="minus" onclick="decrement(this.id)">-</div>
+                        <input id="9" type="number" class="number" value="0" min="0" max="99" step="1"> 
+                        <div id="9" class="plus" onclick="increment(this.id)">+</div>
+                    </div>
+                </div> 
+                <!--Item 10............-->
+                <div class="custom-item">
+                    <img alt src="resources/icons/Icons_loads/lamp-2.svg" class="icon">
+                    <div class="text" id="item-name">Incandescent Lamps</div>
+                    <div class="counter">
+                        <div id="10" class="minus" onclick="decrement(this.id)">-</div>
+                        <input id="10" type="number" class="number" value="0" min="0" max="99" step="1"> 
+                        <div id="10" class="plus" onclick="increment(this.id)">+</div>
+                    </div>
+                </div> 
+                <!--Item 11............-->
+                <div class="custom-item">
+                    <img alt src="resources/icons/Icons_loads/kettle.svg" class="icon">
+                    <div class="text" id="item-name">Kettle</div>
+                    <div class="counter">
+                        <div id="11" class="minus" onclick="decrement(this.id)">-</div>
+                        <input id="11" type="number" class="number" value="0" min="0" max="99" step="1"> 
+                        <div id="11" class="plus" onclick="increment(this.id)">+</div>
+                    </div>
+                </div> 
+                <!--Item 12............-->
+                <div class="custom-item">
+                    <img alt src="resources/icons/Icons_loads/led-lamp.svg" class="icon">
+                    <div class="text" id="item-name">LED Lights</div>
+                    <div class="counter">
+                        <div id="12" class="minus" onclick="decrement(this.id)">-</div>
+                        <input id="12" type="number" class="number" value="0" min="0" max="99" step="1"> 
+                        <div id="12" class="plus" onclick="increment(this.id)">+</div>
+                    </div>
+                </div> 
+                <!--Item 13............-->
+                <div class="custom-item">
+                    <img alt src="resources/icons/Icons_loads/microwave.svg" class="icon">
+                    <div class="text" id="item-name">Microwave</div>
+                    <div class="counter">
+                        <div id="13" class="minus" onclick="decrement(this.id)">-</div>
+                        <input id="13" type="number" class="number" value="0" min="0" max="99" step="1"> 
+                        <div id="13" class="plus" onclick="increment(this.id)">+</div>
+                    </div>
+                </div>
+                <!--Item 14............-->
+                <div class="custom-item">
+                    <img alt src="resources/icons/Icons_loads/oven.svg" class="icon">
+                    <div class="text" id="item-name">Oven</div>
+                    <div class="counter">
+                        <div id="14" class="minus" onclick="decrement(this.id)">-</div>
+                        <input id="14" type="number" class="number" value="0" min="0" max="99" step="1"> 
+                        <div id="14" class="plus" onclick="increment(this.id)">+</div>
+                    </div>
+                </div> 
+                <!--Item 15............-->
+                <div class="custom-item">
+                    <img alt src="resources/icons/Icons_loads/ro.svg" class="icon">
+                    <div class="text" id="item-name">Reverse Osmosis (RO)</div>
+                    <div class="counter">
+                        <div id="15" class="minus" onclick="decrement(this.id)">-</div>
+                        <input id="15" type="number" class="number" value="0" min="0" max="99" step="1"> 
+                        <div id="15" class="plus" onclick="increment(this.id)">+</div>
+                    </div>
+                </div> 
+                <!--Item 16............-->
+                <div class="custom-item">
+                    <img alt src="resources/icons/Icons_loads/slowcooker.svg" class="icon">
+                    <div class="text" id="item-name">Slow Cooker</div>
+                    <div class="counter">
+                        <div id="16" class="minus" onclick="decrement(this.id)">-</div>
+                        <input id="16" type="number" class="number" value="0" min="0" max="99" step="1"> 
+                        <div id="16" class="plus" onclick="increment(this.id)">+</div>
+                    </div>
+                </div> 
+                <!--Item 17............-->
+                <div class="custom-item">
+                    <img alt src="resources/icons/Icons_loads/hotplate.svg" class="icon">
+                    <div class="text" id="item-name">Stove Hot plate</div>
+                    <div class="counter">
+                        <div id="17" class="minus" onclick="decrement(this.id)">-</div>
+                        <input id="17" type="number" class="number" value="0" min="0" max="99" step="1"> 
+                        <div id="17" class="plus" onclick="increment(this.id)">+</div>
+                    </div>
+                </div> 
+                <!--Item 18............-->
+                <div class="custom-item">
+                    <img alt src="resources/icons/Icons_loads/toaster.svg" class="icon">
+                    <div class="text" id="item-name">Toaster</div>
+                    <div class="counter">
+                        <div id="18" class="minus" onclick="decrement(this.id)">-</div>
+                        <input id="18" type="number" class="number" value="0" min="0" max="99" step="1"> 
+                        <div id="18" class="plus" onclick="increment(this.id)">+</div>
+                    </div>
+                </div> 
+                <!--Item 19............-->
+                <div class="custom-item">
+                    <img alt src="resources/icons/Icons_loads/air-conditioner.svg" class="icon">
+                    <div class="text" id="item-name">AC (Air Conditioner) Unit</div>
+                    <div class="counter">
+                        <div id="19" class="minus" onclick="decrement(this.id)">-</div>
+                        <input id="19" type="number" class="number" value="0" min="0" max="99" step="1"> 
+                        <div id="19" class="plus" onclick="increment(this.id)">+</div>
+                    </div>
+                </div> 
+                <!--Item 20............-->
+                <div class="custom-item">
+                    <img alt src="resources/icons/Icons_loads/floors.svg" class="icon">
+                    <div class="text" id="item-name">Under-floor Heating</div>
+                    <div class="counter">
+                        <div id="20" class="minus" onclick="decrement(this.id)">-</div>
+                        <input id="20" type="number" class="number" value="0" min="0" max="99" step="1"> 
+                        <div id="20" class="plus" onclick="increment(this.id)">+</div>
+                    </div>
+                </div> 
+                <!--Item 21............-->
+                <div class="custom-item">
+                    <img alt src="resources/icons/Icons_loads/geyser.svg" class="icon">
+                    <div class="text" id="item-name">Geyser</div>
+                    <div class="counter">
+                        <div id="21" class="minus" onclick="decrement(this.id)">-</div>
+                        <input id="21" type="number" class="number" value="0" min="0" max="99" step="1"> 
+                        <div id="21" class="plus" onclick="increment(this.id)">+</div>
+                    </div>
+                </div> 
+                <!--Item 22............-->
+                <div class="custom-item">
+                    <img alt src="resources/icons/Icons_loads/pool.svg" class="icon">
+                    <div class="text" id="item-name">Pool Heater</div>
+                    <div class="counter">
+                        <div id="22" class="minus" onclick="decrement(this.id)">-</div>
+                        <input id="22" type="number" class="number" value="0" min="0" max="99" step="1"> 
+                        <div id="22" class="plus" onclick="increment(this.id)">+</div>
+                    </div>
+                </div> 
+                <!--Item 23............-->
+                <div class="custom-item">
+                    <img alt src="resources/icons/Icons_loads/water-aerobics.svg" class="icon">
+                    <div class="text" id="item-name">Jacuzzi</div>
+                    <div class="counter">
+                        <div id="23" class="minus" onclick="decrement(this.id)">-</div>
+                        <input id="23" type="number" class="number" value="0" min="0" max="99" step="1"> 
+                        <div id="23" class="plus" onclick="increment(this.id)">+</div>
+                    </div>
+                </div>
+                <!--Item 24............-->
+                <div class="custom-item">
+                    <img alt src="resources/icons/Icons_loads/dishwasher.svg" class="icon">
+                    <div class="text" id="item-name">Dishwasher</div>
+                    <div class="counter">
+                        <div id="24" class="minus" onclick="decrement(this.id)">-</div>
+                        <input id="24" type="number" class="number" value="0" min="0" max="99" step="1"> 
+                        <div id="24" class="plus" onclick="increment(this.id)">+</div>
+                    </div>
+                </div> 
+                <!--Item 25............-->
+                <div class="custom-item">
+                    <img alt src="resources/icons/Icons_loads/hood-2.svg" class="icon">
+                    <div class="text" id="item-name">Washing Machine</div>
+                    <div class="counter">
+                        <div id="25" class="minus" onclick="decrement(this.id)">-</div>
+                        <input id="25" type="number" class="number" value="0" min="0" max="99" step="1"> 
+                        <div id="25" class="plus" onclick="increment(this.id)">+</div>
+                    </div>
+                </div> 
+                <!--Item 26............-->
+                <div class="custom-item">
+                    <img alt src="resources/icons/Icons_loads/hood-2.svg" class="icon">
+                    <div class="text" id="item-name">Tumble Dryer</div>
+                    <div class="counter">
+                        <div id="26" class="minus" onclick="decrement(this.id)">-</div>
+                        <input id="26" type="number" class="number" value="0" min="0" max="99" step="1"> 
+                        <div id="26" class="plus" onclick="increment(this.id)">+</div>
+                    </div>
+                </div> 
+                <!--Item 27............-->
+                <div class="custom-item">
+                    <img alt src="resources/icons/Icons_loads/sink.svg" class="icon">
+                    <div class="text" id="item-name">Borehole Pump</div>
+                    <div class="counter">
+                        <div id="27" class="minus" onclick="decrement(this.id)">-</div>
+                        <input id="27" type="number" class="number" value="0" min="0" max="99" step="1"> 
+                        <div id="27" class="plus" onclick="increment(this.id)">+</div>
+                    </div>
+                </div> 
+                <!--Item 28............-->
+                <div class="custom-item">
+                    <img alt src="resources/icons/Icons_loads/pool-pump.svg" class="icon">
+                    <div class="text" id="item-name">Pool Pump</div>
+                    <div class="counter">
+                        <div id="28" class="minus" onclick="decrement(this.id)">-</div>
+                        <input id="28" type="number" class="number" value="0" min="0" max="99" step="1"> 
+                        <div id="28" class="plus" onclick="increment(this.id)">+</div>
+                    </div>
+                </div> 
+                <!--Item 29............-->
+                <div class="custom-item">
+                    <img alt src="resources/icons/Icons_loads/vintage-tv.svg" class="icon">
+                    <div class="text" id="item-name">TV Sets</div>
+                    <div class="counter">
+                        <div id="29" class="minus" onclick="decrement(this.id)">-</div>
+                        <input id="29" type="number" class="number" value="0" min="0" max="99" step="1"> 
+                        <div id="29" class="plus" onclick="increment(this.id)">+</div>
+                    </div>
+                </div> 
+                <!--Item 30............-->
+                <div class="custom-item">
+                    <img alt src="resources/icons/Icons_loads/podcast-mic.svg" class="icon">
+                    <div class="text" id="item-name">Hi-fi Sets</div>
+                    <div class="counter">
+                        <div id="30" class="minus" onclick="decrement(this.id)">-</div>
+                        <input id="30" type="number" class="number" value="0" min="0" max="99" step="1"> 
+                        <div id="30" class="plus" onclick="increment(this.id)">+</div>
+                    </div>
+                </div> 
+                <!--Item 31............-->
+                <div class="custom-item">
+                    <img alt src="resources/icons/Icons_loads/wine-list.svg" class="icon">
+                    <div class="text" id="item-name">Wine Cellar</div>
+                    <div class="counter">
+                        <div id="31" class="minus" onclick="decrement(this.id)">-</div>
+                        <input id="31" type="number" class="number" value="0" min="0" max="99" step="1"> 
+                        <div id="31" class="plus" onclick="increment(this.id)">+</div>
+                    </div>
+                </div> 
+                <!--Item 32............-->
+                <div class="custom-item">
+                    <img alt src="resources/icons/Icons_loads/lift.svg" class="icon">
+                    <div class="text" id="item-name">Elevator</div>
+                    <div class="counter">
+                        <div id="32" class="minus" onclick="decrement(this.id)">-</div>
+                        <input id="32" type="number" class="number" value="0" min="0" max="99" step="1"> 
+                        <div id="32" class="plus" onclick="increment(this.id)">+</div>
+                    </div>
+                </div> 
+                <!--Item 33............-->
+                <div class="custom-item">
+                    <img alt src="resources/icons/Icons_loads/shinto.svg" class="icon">
+                    <div class="text" id="item-name">Gate Motor</div>
+                    <div class="counter">
+                        <div id="33" class="minus" onclick="decrement(this.id)">-</div>
+                        <input id="33" type="number" class="number" value="0" min="0" max="99" step="1"> 
+                        <div id="33" class="plus" onclick="increment(this.id)">+</div>
+                    </div>
+                </div>
+                <!--Item 34............-->
+                <div class="custom-item">
+                    <img alt src="resources/icons/Icons_loads/car-parking.svg" class="icon">
+                    <div class="text" id="item-name">Garage Door</div>
+                    <div class="counter">
+                        <div id="34" class="minus" onclick="decrement(this.id)">-</div>
+                        <input id="34" type="number" class="number" value="0" min="0" max="99" step="1"> 
+                        <div id="34" class="plus" onclick="increment(this.id)">+</div>
+                    </div>
+                </div> 
+                <!--Item 35............-->
+                <div class="custom-item">
+                    <img alt src="resources/icons/Icons_loads/olympic-flame.svg" class="icon">
+                    <div class="text" id="item-name">Heaters</div>
+                    <div class="counter">
+                        <div id="35" class="minus" onclick="decrement(this.id)">-</div>
+                        <input id="35" type="number" class="number" value="0" min="0" max="99" step="1"> 
+                        <div id="35" class="plus" onclick="increment(this.id)">+</div>
+                    </div>
+                </div> 
+                <!--Item 36............-->
+                <div class="custom-item">
+                    <img alt src="resources/icons/Icons_loads/laptop-1.svg" class="icon">
+                    <div class="text" id="item-name">Computers (Laptops and Desktops)</div>
+                    <div class="counter">
+                        <div id="36" class="minus" onclick="decrement(this.id)">-</div>
+                        <input id="36" type="number" class="number" value="0" min="0" max="99" step="1"> 
+                        <div id="36" class="plus" onclick="increment(this.id)">+</div>
+                    </div>
+                </div> 
+                <!--Item 37............-->
+                <div class="custom-item">
+                    <img alt src="resources/icons/Icons_loads/drops.svg" class="icon">
+                    <div class="text" id="item-name">Fountains (Pumps)</div>
+                    <div class="counter">
+                        <div id="37" class="minus" onclick="decrement(this.id)">-</div>
+                        <input id="37" type="number" class="number" value="0" min="0" max="99" step="1"> 
+                        <div id="37" class="plus" onclick="increment(this.id)">+</div>
+                    </div>
+                </div> 
+                <!--Item 38............-->
+                <div class="custom-item">
+                    <img alt src="resources/icons/Icons_loads/ventilation.svg" class="icon">
+                    <div class="text" id="item-name">Vacuum Cleaners</div>
+                    <div class="counter">
+                        <div id="38" class="minus" onclick="decrement(this.id)">-</div>
+                        <input id="38" type="number" class="number" value="0" min="0" max="99" step="1"> 
+                        <div id="38" class="plus" onclick="increment(this.id)">+</div>
+                    </div>
+                </div> 
+                <!--Item 39............-->
+                <div class="custom-item">
+                    <img alt src="resources/icons/Icons_loads/iron-2.svg" class="icon">
+                    <div class="text" id="item-name">Clothes Irons</div>
+                    <div class="counter">
+                        <div id="39" class="minus" onclick="decrement(this.id)">-</div>
+                        <input id="39" type="number" class="number" value="0" min="0" max="99" step="1"> 
+                        <div id="39" class="plus" onclick="increment(this.id)">+</div>
+                    </div>
+                </div> 
+                <!--Item 40............-->
+                <div class="custom-item">
+                    <img alt src="resources/icons/Icons_loads/other.svg" class="icon">
+                    <div class="text" id="item-name">Other</div>
+                    <div class="counter">
+                        <div id="40" class="minus" onclick="decrement(this.id)">-</div>
+                        <input id="40" type="number" class="number" value="0" min="0" max="99" step="1"> 
+                        <div id="40" class="plus" onclick="increment(this.id)">+</div>
+                    </div>
+                </div> 
+            </div>
+            <form method="POST" onsubmit="" id="info">
+                    <button type="submit" class="calc-Container">SAVE</button>
+            </form>
+            </br></br></br></br>
+        </section>
+        <script src="https://maps.googleapis.com/maps/api/js?libraries=places&callback=initialize&key=AIzaSyCF_57IXuWDUqgwBnr0y5UjCF-cZRn9Ask" defer></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="resources/script/map.js" type="text/javascript"></script>
+        <script src="resources/script/script.js" type="text/javascript"></script>
     </body>
 </html>
