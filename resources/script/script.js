@@ -113,10 +113,10 @@ function checkOpt(){
     }
 }
 function checkFill(){
-    length_a = document.querySelector('.a').value.length;
-    length_b = document.querySelector('.b').value.length;
-    length_c = document.querySelector('.c').value.length;
-    if(length_a > 0 && length_b > 0 && length_c > 0){
+    length_a = unit_a.value.length;
+    length_b = unit_b.value.length;
+    length_c = unit_c.value.length;
+    if((length_a > 0) && (length_b > 0) && (length_c > 0)){
         $("button.calc-Container").css("opacity","1.0");
     }
     else{
@@ -125,7 +125,7 @@ function checkFill(){
 }
 //INDEX page.........................................................................
 var p = window.location.pathname;
- if (p.length === 0 || p === "/" || p.match(/^\/?index/))
+ if ((p.length === 0) || (p === "/") || (p.match(/^\/?index/)))
      $("button.calc-Container").css("opacity","1.0");
  //customise page.........................................................................
 if(document.location.pathname === "/customise.html"){
