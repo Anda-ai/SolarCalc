@@ -140,11 +140,19 @@ span {
   .tile:hover .sun {
     margin-left: -6%;
   }
+  form {
+    margin-left: 0vw;
+    margin-right: 0vw;
+  }
+  .tile {
+    width: 90%;
+  }
 }
 
 form {
-  display: flex;
+  display: block;
   justify-content: center;
+  align-self: center;
   padding: 1vw 3vw 4vw 3vw;
   width: 60vw;
 }
@@ -191,11 +199,66 @@ form {
 }
 
 .calc:hover {
-  text-color: white;
+  color: white;
 }
 
 button:active,
 button:focus {
   -moz-outline-style: none; /*removes ouline from button*/
   outline: none;
+}
+
+/* FORM PAGE */
+.form-heading {
+  /* margin: 22.5vh 0 77.5vh 0; */
+  color: #ff9c1b;
+  /* text-shadow: 0 0 5px #ffa733; */
+  font-size: 1.8em;
+}
+
+.table {
+  color: white;
+  font-size: clamp(0.5em, 0.25em + 2vw, 2em);
+  font-weight: 400;
+}
+
+.form-field {
+  font-weight: 400;
+}
+
+.text-input {
+  border: none;
+  border-radius: 8px;
+  font-size: clamp(0.5em, 0.25em + 2vw, 2em);
+  font-weight: 400;
+  margin: 0.25em 0.25em 0.25em 0.5em;
+  outline: none;
+  padding-left: 9px;
+  height: 4vh;
+  /* max-width: 400px; */
+}
+
+.field {
+  padding: 2em;
+}
+
+.submit-button {
+  margin: 1vh 2vh 3vh 2vh;
+  background-color: var(--background-three);
+  color: var(--color-primary);
+  border: 0;
+  border-radius: 10px;
+  padding: 1vh;
+  text-align: center;
+  width: 20vh;
+  justify-content: center;
+  display: block;
+  align-self: center;
+  font-size: 18px;
+}
+
+@media (max-width: 450px) {
+  .form-heading {
+    font-size: 1.4em;
+  }
 }

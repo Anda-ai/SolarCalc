@@ -13,37 +13,40 @@ and open the template in the editor.
         <link href="resources/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
         <link rel="icon" href="resources/icons/icon.png" type="image/png">
-        <link href="resources/style/info.css" rel="stylesheet" type="text/css"/>
+        <link href="resources/style/style.css" rel="stylesheet" type="text/css"/>
        
     </head>
     <body>
-        <div class="logo-container">
-            <div class="logo"/></div>
-        </div>
-        <div class="instruction-text">Basic information</div>
-        <div class="instruction">Please give us some basic information:</div>
-        <div class="options">
-            <div class="instruction">Is your home single phase or three phase?</div>
-            <!--New code here...-->
-            <div class="optA">
-                <select name="plan" onchange='checkOpt()' class="optA">
-                    <option value="none" selected disabled hidden >Select phase</option>
-                    <option value="single">Single phase</option>
-                    <option value="three">Three phase</option>
-                </select>
+        <section class="tile">
+            <div class="logo-container">
+                <div class="logo"/></div>
             </div>
-            <div class="instruction">What suburb do you live in?</div>
-            <!--New code here...-->
-            <div id="locationField" class="optB" >
-                <input id="autocomplete" placeholder="Suburb" onFocus="geolocate()" type="text"/>
-                <div class="search"><i class="fa fa-search"></i></div>
+            <div class="instruction-text">Basic information</div>
+            <div class="instruction-text">Please give us some basic information:</div>
+            <div class="options">
+                <div class="instruction">Is your home single phase or three phase?</div>
+                <!--New code here...-->
+                <div class="optA">
+                    <select name="plan" onchange='checkOpt()' class="optA">
+                        <option value="none" selected disabled hidden >Select phase</option>
+                        <option value="single">Single phase</option>
+                        <option value="three">Three phase</option>
+                    </select>
+                </div>
+                <div class="instruction">What suburb do you live in?</div>
+                <!--New code here...-->
+                <div id="locationField" class="optB" >
+                    <input id="autocomplete" placeholder="Suburb" onFocus="geolocate()" type="text"/>
+                    <div class="search"><i class="fa fa-search"></i></div>
+                </div>
             </div>
-        </div>
-        <form method="POST" action="index.html" onsubmit="verifyAction(event)">
-            <div class="btn-next-Container">
-                <button type="submit" class="btn-next">NEXT</button>
-            </div>
-        </form>
+            <form method="POST" action="index.html" onsubmit="verifyAction(event)">
+                <div class="btn-next-Container">
+                    <button type="submit" class="calc-Container">NEXT</button>
+                </div>
+            </form>
+        </section>
+        
         <script src="https://maps.googleapis.com/maps/api/js?libraries=places&callback=initialize&key=AIzaSyCF_57IXuWDUqgwBnr0y5UjCF-cZRn9Ask" defer></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
