@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>database</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="resources/icons/icon.png" type="image/png">
+  <link href="resources/style/style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+  <div class="logo"/></div>
+  <section class="tile">
+    <form method="post" autocomplete="off" name="google-sheet">
+  	<center><br><br>
+        <h2 class="form-heading">Registration Form</h2><br>
+        <table class="table" border="0">	
+            
+            <tr class="field"><td><b class="form-field">Name : </b></td>
+            <td><input class="text-input" type="text" name="Name"   required="" /></td>
+            </tr>
+            <tr class="field"><td><b class="form-field">Email : </b></td>
+            <td><input class="text-input" type="text" name="Email"   required="" /></td>
+            </tr>
+            <tr class="field"><td><b class="form-field">Phone no. : </b></td>
+            <td><input class="text-input" type="number" name="Phone"   required="" /></td>
+            </tr>
+            <tr class="field"><td><b class="form-field">Gender : </b></td>
+            <td>
+              <input class="text-input" type="radio"  name="Gender" value="male" >male
+              <input class="text-input" type="radio"  name="Gender" value="female"  >female<br/></td>
+            </tr>
+        </table>
+        <br><br>
+        <input class="submit-button" type="submit" name="submit" value="SUBMIT"/>
+    </center>
+  
+  </section>
+  </form>
+
+  <script type="text/javascript">
+
+
+	  const scriptURL = 'https://script.google.com/macros/s/AKfycbw_BhD5IVuhF1T6z5AggHApGGsgmflboblViszpBVJpfj5qW5jOujVNtyFTdiPCdoRTGw/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("You have successfully submitted."))
+                .catch(error => console.error('Error!', error.message))
+            })
+  </script>
+</body>
+</html>
