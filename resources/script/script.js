@@ -53,7 +53,8 @@ document.body.addEventListener('click', function (event) {
 unit_a = document.querySelector('.a');
 document.body.addEventListener('click', function (event) {
     if (unit_a.contains(event.target)) {
-        document.onkeypress = function(e) {
+        console.log(event);
+        document.onkeydown = function(e) {
             checkFill();
         };
         document.body.onkeyup = function(e){
@@ -64,7 +65,7 @@ document.body.addEventListener('click', function (event) {
 unit_b = document.querySelector('.b');
 document.body.addEventListener('click', function (event) {
     if (unit_b.contains(event.target)) {
-        document.onkeypress = function(e) {
+        document.onkeydown = function(e) {
             checkFill();
         };
         document.body.onkeyup = function(e){
@@ -75,7 +76,7 @@ document.body.addEventListener('click', function (event) {
 unit_c = document.querySelector('.c');
 document.body.addEventListener('click', function (event) {
     if (unit_c.contains(event.target)) {
-        document.onkeypress = function(e) {
+        document.onkeydown = function(e) {
             checkFill();
         };
         document.body.onkeyup = function(e){
