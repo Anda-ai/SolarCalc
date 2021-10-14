@@ -9,8 +9,6 @@ and open the template in the editor.
         <title>SolarCheck Comparison</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="resources/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
-        <link href="resources/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
         <link rel="icon" href="resources/icons/icon.png" type="image/png">
         <link href="resources/style/style.css" rel="stylesheet" type="text/css"/>
@@ -21,17 +19,19 @@ and open the template in the editor.
             <div class="instruction-text">Which solution are you interested in?</div>
             <div class="instruction">Select one option below:</div>
             <div class="options">
-                <label class="container">
-                    <input type="checkbox" class="solar-item" id="opt1">
-                    <span class="checkmark"></span>
-                    <label class="text" for="opt1">Solar Solutions</label>
-                </label>
-
-                <label class="container">
-                    <input type="checkbox" class="battery-item" id="opt2">
-                    <span class="checkmark"></span>
-                    <label class="text" for="opt2">Battery Backup Solutions</label>
-                </label>
+                <section class="container">
+                
+                    <label class="radio-inputs" id="solar">
+                        <input type="radio" name="system_choice" class="radio-input" id="solar-item">
+                        Solar Solutions
+                    </label>
+                
+                    <label class="radio-inputs" id="battery">
+                        <input type="radio" name="system_choice" class="radio-input" id="battery-item">
+                        Battery Backup Solutions
+                    </label>
+                
+                </section>
             </div>
             <form method="GET" onsubmit="verifyAction(event)" id="info">
                     <button type="submit" class="calc-Container">NEXT</button>
