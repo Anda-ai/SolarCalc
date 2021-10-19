@@ -1,0 +1,27 @@
+{
+  "name": "SolarCalc",
+  "version": "1.0.0",
+  "description": "<<<<<<< HEAD # BRANCHES",
+  "main": "form.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anda-ai/SolarCalc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Anda-ai/SolarCalc/issues"
+  },
+  "homepage": "https://github.com/Anda-ai/SolarCalc#readme",
+  "dependencies": {
+    "firebase": "^9.1.3"
+  },
+  "devDependencies": {
+    "webpack": "^5.58.2",
+    "webpack-cli": "^4.9.1"
+  }
+}
