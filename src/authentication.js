@@ -1,13 +1,12 @@
 // Import the functions you need from the SDKs you need
-
-// import { initializeApp } from 'firebase/app';
+// import { initializeApp } from "firebase/app";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js";
 // import { initializeApp } from "../node_modules/firebase/firebase-app.js";
 
 import { getAuth, 
     createUserWithEmailAndPassword, 
     signInWithEmailAndPassword 
-// } from "../node_modules/firebase/firebase-auth.js";
+// } from "/node_modules/firebase/firebase-auth.js";
 } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -17,14 +16,14 @@ import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.1.3/
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-apiKey: "AIzaSyCjrfOjmrqqRV_WhGiCRPsvZ7LNm7DDMyg",
-authDomain: "user-database-3a780.firebaseapp.com",
-databaseURL: "https://solarcheck-firestore-default-rtdb.europe-west1.firebasedatabase.app/",
-projectId: "user-database-3a780",
-storageBucket: "user-database-3a780.appspot.com",
-messagingSenderId: "1033124514560",
-appId: "1:1033124514560:web:eb53798d6b3c33c25881e5"
-};
+    apiKey: "AIzaSyCjrfOjmrqqRV_WhGiCRPsvZ7LNm7DDMyg",
+    authDomain: "user-database-3a780.firebaseapp.com",
+    databaseURL: "https://user-database-3a780-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "user-database-3a780",
+    storageBucket: "user-database-3a780.appspot.com",
+    messagingSenderId: "1033124514560",
+    appId: "1:1033124514560:web:eb53798d6b3c33c25881e5"
+  };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
